@@ -5,15 +5,13 @@ An integer n is a power of two, if there exists an integer x such that n == 2^x.
 class Solution {
 public:
     bool isPowerOfTwo(int n) {
-        if(n <= 0){
+        	if(n <= 0)
 			return false;
-		}
-		if(n == 1){
+		else if(n == 1)
 			return true;
-		}
-		if(n % 2 != 0){
+		else if(n % 2 != 0)
 			return false;
-		}
-		return isPowerOfTwo(n / 2);
+		else 
+			return isPowerOfTwo(n / 2);
 	}
 };
